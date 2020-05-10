@@ -71,18 +71,18 @@
         <config.version>1.2.1</config.version>
         <slf4j-api.version>1.7.22</slf4j-api.version>
         <logback-classic.version>1.2.0</logback-classic.version>
-        <commons-lang.version>2.6</commons-lang.version>
+        <commons-lang.version>3.10</commons-lang.version>
         <commons-pool2.version>2.4.2</commons-pool2.version>
         <commons-pool.version>1.6</commons-pool.version>
         <commons-dbcp2.version>2.7.0</commons-dbcp2.version>
-        <cglib.version>3.1</cglib.version>
+        <cglib.version>3.3.0</cglib.version>
         <aopalliance.version>1.0</aopalliance.version>
         <zkclient.version>0.11</zkclient.version>
         <apache-zookeeper.version>3.4.14</apache-zookeeper.version>
         <curator-test.version>2.9.1</curator-test.version>
         <spring-context-support.version>1.0.2</spring-context-support.version>
         <jacoco-maven-plugin.version>0.8.3</jacoco-maven-plugin.version>
-        <apollo-client.version>1.1.0</apollo-client.version>
+        <apollo-client.version>1.6.0</apollo-client.version>
         <redis-clients.version>2.9.0</redis-clients.version>
         <eureka-clients.version>1.9.5</eureka-clients.version>
         <consul-clients.version>1.4.2</consul-clients.version>
@@ -96,9 +96,10 @@
         <httpclient.version>4.5.8</httpclient.version>
         <httpcore.version>4.4.11</httpcore.version>
         <druid.version>1.1.12</druid.version>
+        <hikaricp.version>3.4.5</hikaricp.version>
         <caffeine.version>2.7.0</caffeine.version>
         <oracle.client.version>10.2.0.3.0</oracle.client.version>
-        <mysql.client.version>5.1.35</mysql.client.version>
+        <mysql.client.version>8.0.20</mysql.client.version>
         <postgres.client.version>42.1.4</postgres.client.version>
         <h2.version>1.4.181</h2.version>
         <motan.version>1.0.0</motan.version>
@@ -150,6 +151,11 @@
                 <version>${druid.version}</version>
             </dependency>
             <dependency>
+                <groupId>com.zaxxer</groupId>
+                <artifactId>HikariCP</artifactId>
+                <version>${hikaricp.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>com.alipay.sofa</groupId>
                 <artifactId>sofa-rpc-all</artifactId>
                 <version>${sofa.rpc.version}</version>
@@ -179,11 +185,13 @@
                 <artifactId>logback-classic</artifactId>
                 <version>${logback-classic.version}</version>
             </dependency>
+
             <dependency>
-                <groupId>commons-lang</groupId>
-                <artifactId>commons-lang</artifactId>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
                 <version>${commons-lang.version}</version>
             </dependency>
+
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-pool2</artifactId>
@@ -502,7 +510,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-javadoc-plugin</artifactId>
-                        <version>2.10.4</version>
+                        <version>3.2.0</version>
                         <configuration>
                             <charset>${project.build.sourceEncoding}</charset>
                             <failOnError>false</failOnError>

@@ -32,7 +32,7 @@ import com.typesafe.config.ConfigFactory;
 import io.netty.util.internal.ConcurrentSet;
 import io.seata.common.thread.NamedThreadFactory;
 import io.seata.config.ConfigFuture.ConfigOperation;
-import org.apache.commons.lang.ObjectUtils;
+import org.apache.commons.lang3.ObjectUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
