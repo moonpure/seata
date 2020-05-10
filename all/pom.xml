@@ -22,6 +22,7 @@
     <groupId>io.seata</groupId>
     <artifactId>seata-all</artifactId>
     <version>1.2.0</version>
+    <packaging>pom</packaging>
 
     <name>Seata All-in-one ${project.version}</name>
     <url>http://seata.io</url>
