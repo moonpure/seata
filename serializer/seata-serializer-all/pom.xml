@@ -23,8 +23,6 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>seata-serializer-all</artifactId>
-    <name>seata-serializer-all ${project.version}</name>
-
     <dependencies>
         <dependency>
             <groupId>${project.groupId}</groupId>

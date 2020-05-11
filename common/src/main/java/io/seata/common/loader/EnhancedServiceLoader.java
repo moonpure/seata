@@ -31,7 +31,7 @@ import java.util.stream.Collectors;
 import io.seata.common.Constants;
 import io.seata.common.executor.Initialize;
 import io.seata.common.util.CollectionUtils;
-import org.apache.commons.lang.exception.ExceptionUtils;
+import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -340,8 +340,7 @@ public class EnhancedServiceLoader {
                     throw (EnhancedServiceNotFoundException)e;
                 } else {
                     throw new EnhancedServiceNotFoundException(
-                            "not found service provider for : " + type.getName() + " caused by " + ExceptionUtils
-                                    .getFullStackTrace(e));
+                            "not found service provider for : " + type.getName() + " caused by " + ExceptionUtils.getStackTrace(e));
                 }
             }
         }
@@ -361,8 +360,7 @@ public class EnhancedServiceLoader {
                     throw (EnhancedServiceNotFoundException)e;
                 } else {
                     throw new EnhancedServiceNotFoundException(
-                            "not found service provider for : " + type.getName() + " caused by " + ExceptionUtils
-                                    .getFullStackTrace(e));
+                            "not found service provider for : " + type.getName() + " caused by " + ExceptionUtils.getStackTrace(e));
                 }
             }
         }

@@ -28,7 +28,7 @@ import io.seata.rm.datasource.undo.KeywordChecker;
 import io.seata.rm.datasource.undo.KeywordCheckerFactory;
 import io.seata.sqlparser.SQLDeleteRecognizer;
 import io.seata.sqlparser.SQLRecognizer;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 
 /**
  * The type Delete executor.

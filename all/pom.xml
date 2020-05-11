@@ -21,7 +21,7 @@
 
     <groupId>io.seata</groupId>
     <artifactId>seata-all</artifactId>
-    <version>1.3.0-SNAPSHOT</version>
+    <version>1.3.0</version>
 
     <name>Seata All-in-one ${project.version}</name>
     <url>http://seata.io</url>
@@ -370,8 +370,8 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>commons-lang</groupId>
-            <artifactId>commons-lang</artifactId>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
         </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>
@@ -735,33 +735,33 @@
             <id>release</id>
             <build>
                 <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-javadoc-plugin</artifactId>
-                        <version>2.10.4</version>
-                        <configuration>
-                            <charset>${project.build.sourceEncoding}</charset>
-                            <failOnError>false</failOnError>
-                            <encoding>${project.build.sourceEncoding}</encoding>
-                            <detectOfflineLinks>true</detectOfflineLinks>
-                            <breakiterator>true</breakiterator>
-                            <author>false</author>
-                            <keywords>true</keywords>
-                            <quiet>true</quiet>
-                            <includeDependencySources>true</includeDependencySources>
-                            <dependencySourceIncludes>
-                                <dependencySourceInclude>io.seata:seata-*</dependencySourceInclude>
-                            </dependencySourceIncludes>
-                        </configuration>
-                        <executions>
-                            <execution>
-                                <id>attach-javadocs</id>
-                                <goals>
-                                    <goal>jar</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
+<!--                    <plugin>-->
+<!--                        <groupId>org.apache.maven.plugins</groupId>-->
+<!--                        <artifactId>maven-javadoc-plugin</artifactId>-->
+<!--                        <version>2.10.4</version>-->
+<!--                        <configuration>-->
+<!--                            <charset>${project.build.sourceEncoding}</charset>-->
+<!--                            <failOnError>false</failOnError>-->
+<!--                            <encoding>${project.build.sourceEncoding}</encoding>-->
+<!--                            <detectOfflineLinks>true</detectOfflineLinks>-->
+<!--                            <breakiterator>true</breakiterator>-->
+<!--                            <author>false</author>-->
+<!--                            <keywords>true</keywords>-->
+<!--                            <quiet>true</quiet>-->
+<!--                            <includeDependencySources>true</includeDependencySources>-->
+<!--                            <dependencySourceIncludes>-->
+<!--                                <dependencySourceInclude>io.seata:seata-*</dependencySourceInclude>-->
+<!--                            </dependencySourceIncludes>-->
+<!--                        </configuration>-->
+<!--                        <executions>-->
+<!--                            <execution>-->
+<!--                                <id>attach-javadocs</id>-->
+<!--                                <goals>-->
+<!--                                    <goal>jar</goal>-->
+<!--                                </goals>-->
+<!--                            </execution>-->
+<!--                        </executions>-->
+<!--                    </plugin>-->
                     <plugin>
                         <groupId>org.sonatype.plugins</groupId>
                         <artifactId>nexus-staging-maven-plugin</artifactId>

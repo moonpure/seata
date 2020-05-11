@@ -24,7 +24,7 @@ import java.util.stream.Stream;
 import io.seata.common.holder.ObjectHolder;
 import io.seata.config.Configuration;
 import io.seata.config.ExtConfigurationProvider;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.cglib.proxy.Enhancer;
 import org.springframework.cglib.proxy.MethodInterceptor;
 import org.springframework.cglib.proxy.MethodProxy;

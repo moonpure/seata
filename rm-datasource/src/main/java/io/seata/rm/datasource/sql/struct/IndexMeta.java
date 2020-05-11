@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-import org.apache.commons.lang.ArrayUtils;
+import org.apache.commons.lang3.ArrayUtils;
 
 /**
  * The type Index meta.
@@ -215,7 +215,7 @@ public class IndexMeta {
             return false;
         }
         IndexMeta indexMeta = (IndexMeta)o;
-        if (!ArrayUtils.isEquals(indexMeta.values, this.values)) {
+        if (!Objects.deepEquals(indexMeta.values, this.values)) {
             return false;
         }
         if (!Objects.equals(indexMeta.nonUnique, this.nonUnique)) {
